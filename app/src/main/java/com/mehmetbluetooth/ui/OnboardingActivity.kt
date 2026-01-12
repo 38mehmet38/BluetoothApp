@@ -21,61 +21,80 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
         
-        prefs = PreferenceManager(this)
-        
-        // Kullanıcı zaten uygulamaya girmişse ana sayfaya git
-        if (!prefs.isFirstLaunch()) {
-            navigateToMain()
-            return
-        }
-        
-        etUserName = findViewById(R.id.etUserName)
-        btnContinue = findViewById(R.id.btnContinue)
-        
-        btnContinue.setOnClickListener {
-            handleContinueClick()
+        try {
+            prefs = PreferenceManager(this)
+            
+            // Kullanıcı zaten uygulamaya girmişse ana sayfaya git
+            if (!prefs.isFirstLaunch()) {
+                navigateToMain()
+                return
+            }
+            
+            etUserName = findViewById(R.id.etUserName)
+            btnContinue = findViewById(R.id.btnContinue)
+            
+            btnContinue.setOnClickListener {
+                handleContinueClick()
+            }
+        } catch (e: Exception) {
+            Toast.makeText(this, "Başlatma hatası: ${e.message}", Toast.LENGTH_LONG).show()
+            android.util.Log.e("OnboardingActivity", "onCreate error", e)
         }
     }
 
     private fun handleContinueClick() {
-        val userName: String? = etUserName.text.toString().trim()
-        
-        if (userName.isNullOrEmpty()) {
-            Toast.makeText(this, "Lütfen adınızı girin", Toast.LENGTH_SHORT).show()
-            return
+        try {
+            val userName: String? = etUserName.text.toString().trim()
+            
+            if (userName.isNullOrEmpty()) {
+                Toast.makeText(this, "Lütfen adınızı girin", Toast.LENGTH_SHORT).show()
+                return
+            }
+            
+            if (userName?.length ?: 0 < 2) {
+                Toast.makeText(this, "Ad en az 2 karakter olmalıdır", Toast.LENGTH_SHORT).show()
+                return
+            }
+            
+            if (userName?.length ?: 0 > 20) {
+                Toast.makeText(this, "Ad maksimum 20 karakter olmalıdır", Toast.LENGTH_SHORT).show()
+                return
+            }
+            
+            // Verileri kaydet
+            val userId = generateUUID()
+            prefs.setUserName(userName ?: "")
+            prefs.setUserId(userId)
+            prefs.setFirstLaunch(false)
+            
+            // Bluetooth Mesh Service'i başlat
+            startBluetoothMeshService()
+            
+            // Ana sayfaya git
+            navigateToMain()
+        } catch (e: Exception) {
+            Toast.makeText(this, "Hata: ${e.message}", Toast.LENGTH_LONG).show()
+            android.util.Log.e("OnboardingActivity", "Continue click error", e)
         }
-        
-        if (userName?.length ?: 0 < 2) {
-            Toast.makeText(this, "Ad en az 2 karakter olmalıdır", Toast.LENGTH_SHORT).show()
-            return
-        }
-        
-        if (userName?.length ?: 0 > 20) {
-            Toast.makeText(this, "Ad maksimum 20 karakter olmalıdır", Toast.LENGTH_SHORT).show()
-            return
-        }
-        
-        // Verileri kaydet
-        val userId = generateUUID()
-        prefs.setUserName(userName ?: "")
-        prefs.setUserId(userId)
-        prefs.setFirstLaunch(false)
-        
-        // Bluetooth Mesh Service'i başlat
-        startBluetoothMeshService()
-        
-        // Ana sayfaya git
-        navigateToMain()
     }
 
     private fun startBluetoothMeshService() {
-        val serviceIntent = Intent(this, BluetoothMeshService::class.java)
-        startService(serviceIntent)
+        try {
+            val serviceIntent = Intent(this, BluetoothMeshService::class.java)
+            startService(serviceIntent)
+        } catch (e: Exception) {
+            android.util.Log.e("OnboardingActivity", "Service start error", e)
+        }
     }
 
     private fun navigateToMain() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        try {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        } catch (e: Exception) {
+            Toast.makeText(this, "MainActivity açılamadı: ${e.message}", Toast.LENGTH_LONG).show()
+            android.util.Log.e("OnboardingActivity", "Navigation error", e)
+        }
     }
 }
