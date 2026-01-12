@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MEHMETBLUETOOTH</string>
+    <string name="welcome_title">Hoş Geldiniz</string>
+    <string name="welcome_subtitle">Bluetooth Mesh Network Haberleşme</string>
+    <string name="enter_name">İsminiz Nedir?</string>
+    <string name="placeholder_name">Ad girin...</string>
+    <string name="continue_button">Devam Et</string>
+    <string name="tab_group_chat">Toplu Sohbet</string>
+    <string name="tab_private_chat">Özel Sohbet</string>
+    <string name="send_message">Mesaj Gönder</string>
+    <string name="type_message">Mesaj yazın...</string>
+    <string name="message_send">Gönder</string>
+    <string name="action_message">💬 Mesaj Yaz</string>
+    <string name="action_audio_call">📞 Sesli Ara</string>
+    <string name="action_video_call">📹 Görüntülü Ara</string>
+    <string name="incoming_call">seni arıyor</string>
+    <string name="call_accept">Kabul Et</string>
+    <string name="call_decline">Reddet</string>
+    <string name="call_end">Görüşmeyi Sonlandır</string>
+    <string name="mute">Sessiz</string>
+    <string name="unmute">Sesi Aç</string>
+    <string name="camera_off">Kamera Kapat</string>
+    <string name="camera_on">Kamera Aç</string>
+    <string name="no_devices">Tespit edilen cihaz yok</string>
+    <string name="online">Çevrimiçi</string>
+    <string name="offline">Çevrimdışı</string>
+</resources>
