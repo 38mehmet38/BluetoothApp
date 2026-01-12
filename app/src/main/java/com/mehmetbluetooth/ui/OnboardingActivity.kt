@@ -38,26 +38,26 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun handleContinueClick() {
-        val userName = etUserName.text.toString().trim()
+        val userName: String? = etUserName.text.toString().trim()
         
-        if (userName.isEmpty()) {
+        if (userName.isNullOrEmpty()) {
             Toast.makeText(this, "Lütfen adınızı girin", Toast.LENGTH_SHORT).show()
             return
         }
         
-        if (userName.length < 2) {
+        if (userName?.length ?: 0 < 2) {
             Toast.makeText(this, "Ad en az 2 karakter olmalıdır", Toast.LENGTH_SHORT).show()
             return
         }
         
-        if (userName.length > 20) {
+        if (userName?.length ?: 0 > 20) {
             Toast.makeText(this, "Ad maksimum 20 karakter olmalıdır", Toast.LENGTH_SHORT).show()
             return
         }
         
         // Verileri kaydet
         val userId = generateUUID()
-        prefs.setUserName(userName)
+        prefs.setUserName(userName ?: "")
         prefs.setUserId(userId)
         prefs.setFirstLaunch(false)
         
