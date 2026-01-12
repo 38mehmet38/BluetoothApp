@@ -1,0 +1,297 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mehmetbluetooth"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Bluetooth Permissions -->
+12    <uses-permission android:name="android.permission.BLUETOOTH" />
+12-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:6:5-68
+12-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:6:22-65
+13    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+13-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:7:5-74
+13-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:7:22-71
+14    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+14-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:8:5-73
+14-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:8:22-70
+15    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+15-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:9:5-78
+15-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:9:22-75
+16    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+16-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:10:5-76
+16-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:10:22-73
+17
+18    <!-- Network Permissions -->
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:13:5-79
+19-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:13:22-76
+20    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+20-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:14:5-79
+20-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:14:22-76
+21    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+21-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:15:5-76
+21-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:15:22-73
+22    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+22-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:16:5-76
+22-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:16:22-73
+23
+24    <!-- Location (required for Bluetooth scanning in Android 12+) -->
+25    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+25-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:19:5-79
+25-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:19:22-76
+26    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+26-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:20:5-81
+26-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:20:22-78
+27
+28    <!-- Camera & Audio -->
+29    <uses-permission android:name="android.permission.CAMERA" />
+29-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:23:5-65
+29-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:23:22-62
+30    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+30-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:24:5-71
+30-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:24:22-68
+31    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+31-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:25:5-80
+31-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:25:22-77
+32
+33    <!-- Internet (for optional Wi-Fi Direct fallback) -->
+34    <uses-permission android:name="android.permission.INTERNET" />
+34-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:28:5-67
+34-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:28:22-64
+35
+36    <!-- Device Features -->
+37    <uses-feature
+37-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:31:5-33:35
+38        android:name="android.hardware.bluetooth"
+38-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:32:9-50
+39        android:required="true" />
+39-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:33:9-32
+40    <uses-feature
+40-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:34:5-36:36
+41        android:name="android.hardware.camera"
+41-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:35:9-47
+42        android:required="false" />
+42-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:36:9-33
+43
+44    <permission
+44-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+45        android:name="com.mehmetbluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+45-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+46        android:protectionLevel="signature" />
+46-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+47
+48    <uses-permission android:name="com.mehmetbluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+48-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+48-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+49
+50    <application
+50-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:38:5-105:19
+51        android:allowBackup="false"
+51-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:39:9-36
+52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+52-->[androidx.core:core:1.12.0] /home/codespace/.gradle/caches/8.8/transforms/6a2d901a062bf8177ec50484d33c3e64/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+53        android:dataExtractionRules="@xml/data_extraction_rules"
+53-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:40:9-65
+54        android:debuggable="true"
+54-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:41:9-35
+55        android:extractNativeLibs="false"
+56        android:fullBackupContent="@xml/backup_rules"
+56-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:42:9-54
+57        android:icon="@android:drawable/sym_def_app_icon"
+57-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:43:9-58
+58        android:label="@string/app_name"
+58-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:44:9-41
+59        android:supportsRtl="true"
+59-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:45:9-35
+60        android:theme="@style/Theme.MEHMETBLUETOOTH"
+60-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:46:9-53
+61        android:usesCleartextTraffic="false" >
+61-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:47:9-45
+62
+63        <!-- Onboarding Activity -->
+64        <activity
+64-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:51:9-59:20
+65            android:name="com.mehmetbluetooth.ui.OnboardingActivity"
+65-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:52:13-50
+66            android:exported="true"
+66-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:53:13-36
+67            android:theme="@style/Theme.MEHMETBLUETOOTH" >
+67-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:54:13-57
+68            <intent-filter>
+68-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:55:13-58:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:56:17-69
+69-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:56:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:57:17-77
+71-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:57:27-74
+72            </intent-filter>
+73        </activity>
+74
+75        <!-- Main Activity -->
+76        <activity
+76-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:62:9-64:40
+77            android:name="com.mehmetbluetooth.ui.MainActivity"
+77-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:63:13-44
+78            android:exported="false" />
+78-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:64:13-37
+79
+80        <!-- Call Screen Activity (Full Screen Intent) -->
+81        <activity
+81-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:67:9-71:43
+82            android:name="com.mehmetbluetooth.ui.CallScreenActivity"
+82-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:68:13-50
+83            android:exported="false"
+83-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:69:13-37
+84            android:showWhenLocked="true"
+84-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:70:13-42
+85            android:turnScreenOn="true" />
+85-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:71:13-40
+86
+87        <!-- Video Call Activity -->
+88        <activity
+88-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:74:9-79:43
+89            android:name="com.mehmetbluetooth.ui.VideoCallActivity"
+89-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:75:13-49
+90            android:exported="false"
+90-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:76:13-37
+91            android:screenOrientation="portrait"
+91-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:77:13-49
+92            android:showWhenLocked="true"
+92-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:78:13-42
+93            android:turnScreenOn="true" />
+93-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:79:13-40
+94
+95        <!-- Direct Message Activity -->
+96        <activity
+96-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:82:9-84:40
+97            android:name="com.mehmetbluetooth.ui.DirectMessageActivity"
+97-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:83:13-53
+98            android:exported="false" />
+98-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:84:13-37
+99
+100        <!-- Bluetooth Mesh Service -->
+101        <service
+101-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:87:9-90:40
+102            android:name="com.mehmetbluetooth.service.BluetoothMeshService"
+102-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:88:13-57
+103            android:enabled="true"
+103-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:89:13-35
+104            android:exported="false" />
+104-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:90:13-37
+105
+106        <!-- Receivers -->
+107        <receiver
+107-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:93:9-103:20
+108            android:name="com.mehmetbluetooth.service.BluetoothReceiver"
+108-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:94:13-54
+109            android:enabled="true"
+109-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:95:13-35
+110            android:exported="true" >
+110-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:96:13-36
+111            <intent-filter>
+111-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:97:13-102:29
+112                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+112-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:98:17-89
+112-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:98:25-86
+113                <action android:name="android.bluetooth.device.action.FOUND" />
+113-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:99:17-80
+113-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:99:25-77
+114                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+114-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:100:17-88
+114-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:100:25-85
+115                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+115-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:101:17-91
+115-->/workspaces/BluetoothApp/app/src/main/AndroidManifest.xml:101:25-88
+116            </intent-filter>
+117        </receiver>
+118
+119        <service
+119-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:24:9-33:19
+120            android:name="androidx.camera.core.impl.MetadataHolderService"
+120-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:25:13-75
+121            android:enabled="false"
+121-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:26:13-36
+122            android:exported="false" >
+122-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:27:13-37
+123            <meta-data
+123-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:30:13-32:89
+124                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+124-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:31:17-103
+125                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+125-->[androidx.camera:camera-camera2:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/54d59241f94c2eabc0740f95be9cd6b4/transformed/jetified-camera-camera2-1.3.0/AndroidManifest.xml:32:17-86
+126        </service>
+127
+128        <provider
+128-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+129            android:name="androidx.startup.InitializationProvider"
+129-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+130            android:authorities="com.mehmetbluetooth.androidx-startup"
+130-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+131            android:exported="false" >
+131-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+132            <meta-data
+132-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+133                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+133-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+134                android:value="androidx.startup" />
+134-->[androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.8/transforms/9214fbb5d87ec7cb40b7223fa2f04237/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+135            <meta-data
+135-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/codespace/.gradle/caches/8.8/transforms/c51f1a23a036a9de657be0bb2d33e6e0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+136                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+136-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/codespace/.gradle/caches/8.8/transforms/c51f1a23a036a9de657be0bb2d33e6e0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+137                android:value="androidx.startup" />
+137-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/codespace/.gradle/caches/8.8/transforms/c51f1a23a036a9de657be0bb2d33e6e0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+138            <meta-data
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+139                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+140                android:value="androidx.startup" />
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+141        </provider>
+142
+143        <receiver
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+144            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+145            android:directBootAware="false"
+145-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+146            android:enabled="true"
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+147            android:exported="true"
+147-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+148            android:permission="android.permission.DUMP" >
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+149            <intent-filter>
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+150                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+150-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+150-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+151            </intent-filter>
+152            <intent-filter>
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+153                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+153-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+153-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+154            </intent-filter>
+155            <intent-filter>
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+156                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+156-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+156-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+157            </intent-filter>
+158            <intent-filter>
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+159                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+159-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+159-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.8/transforms/571bf2c02099a7c1f536e516e57cefd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+160            </intent-filter>
+161        </receiver>
+162    </application>
+163
+164</manifest>

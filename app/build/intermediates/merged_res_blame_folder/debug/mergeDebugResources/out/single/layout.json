@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/fragment_private_chat.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/fragment_private_chat.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/activity_call_screen.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/activity_call_screen.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/activity_main.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/activity_video_call.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/activity_video_call.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/activity_direct_message.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/activity_direct_message.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/item_message.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/item_message.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/item_user.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/item_user.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/activity_onboarding.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/fragment_group_chat.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/fragment_group_chat.xml"
+    },
+    {
+        "merged": "com.mehmetbluetooth.app-mergeDebugResources-43:/layout/bottom_sheet_user_actions.xml",
+        "source": "com.mehmetbluetooth.app-main-46:/layout/bottom_sheet_user_actions.xml"
+    }
+]

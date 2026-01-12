@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue">
+
+    <!-- Caller Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mehmet"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvCallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/accent"
+            android:layout_marginBottom="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <!-- Accept Button (Green) -->
+            <Button
+                android:id="@+id/btnAcceptCall"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:text="✓"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/success"
+                android:layout_marginEnd="32dp" />
+
+            <!-- Decline Button (Red) -->
+            <Button
+                android:id="@+id/btnDeclineCall"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:text="✕"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/error"
+                android:layout_marginStart="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

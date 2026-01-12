@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FF00BCD4</color>
+    <color name="black">#FF000000</color>
+    <color name="dark_blue">#FF0D47A1</color>
+    <color name="error">#FFF44336</color>
+    <color name="gray_dark">#FF424242</color>
+    <color name="gray_light">#FFF5F5F5</color>
+    <color name="gray_medium">#FF9E9E9E</color>
+    <color name="light_blue">#FF42A5F5</color>
+    <color name="success">#FF4CAF50</color>
+    <color name="warning">#FFFFC107</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="action_audio_call">📞 Sesli Ara</string>
+    <string name="action_message">💬 Mesaj Yaz</string>
+    <string name="action_video_call">📹 Görüntülü Ara</string>
+    <string name="app_name">MEHMETBLUETOOTH</string>
+    <string name="call_accept">Kabul Et</string>
+    <string name="call_decline">Reddet</string>
+    <string name="call_end">Görüşmeyi Sonlandır</string>
+    <string name="camera_off">Kamera Kapat</string>
+    <string name="camera_on">Kamera Aç</string>
+    <string name="continue_button">Devam Et</string>
+    <string name="enter_name">İsminiz Nedir?</string>
+    <string name="incoming_call">seni arıyor</string>
+    <string name="message_send">Gönder</string>
+    <string name="mute">Sessiz</string>
+    <string name="no_devices">Tespit edilen cihaz yok</string>
+    <string name="offline">Çevrimdışı</string>
+    <string name="online">Çevrimiçi</string>
+    <string name="placeholder_name">Ad girin...</string>
+    <string name="send_message">Mesaj Gönder</string>
+    <string name="tab_group_chat">Toplu Sohbet</string>
+    <string name="tab_private_chat">Özel Sohbet</string>
+    <string name="type_message">Mesaj yazın...</string>
+    <string name="unmute">Sesi Aç</string>
+    <string name="welcome_subtitle">Bluetooth Mesh Network Haberleşme</string>
+    <string name="welcome_title">Hoş Geldiniz</string>
+    <style name="Theme.MEHMETBLUETOOTH" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/light_blue</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/gray_dark</item>
+        <item name="android:textColorSecondary">@color/gray_medium</item>
+    </style>
+</resources>

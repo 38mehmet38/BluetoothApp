@@ -1,0 +1,27 @@
+<lint-module
+    format="1"
+    dir="/workspaces/BluetoothApp/app"
+    name=":app"
+    type="APP"
+    maven="MEHMETBLUETOOTH:app:unspecified"
+    agpVersion="8.6.0"
+    buildFolder="build"
+    bootClassPath="/home/codespace/Android/Sdk/platforms/android-34-2/android.jar:/home/codespace/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34">
+  <lintOptions
+      disable="MissingTranslation,ExtraTranslation"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true">
+    <severities>
+      <severity
+        id="ExtraTranslation"
+        severity="IGNORE" />
+      <severity
+        id="MissingTranslation"
+        severity="IGNORE" />
+    </severities>
+  </lintOptions>
+  <variant name="release"/>
+</lint-module>
